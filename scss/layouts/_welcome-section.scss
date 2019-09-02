@@ -1,0 +1,56 @@
+.welcome-section {
+    padding: 100px 15px;
+
+    .wrapper {
+        .welcome-slide {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .welcome-item {
+                flex: 1 1 30%;
+                margin-right: 20px;
+                margin-bottom: 50px;
+                padding: 40px;
+
+                i {
+                    font-size: 36px;
+                    color: $orange;
+                    margin-bottom: 30px;
+                }
+
+                h3 {
+                    text-transform: capitalize;
+                    @include font-parametars (20px, 22px, 700);
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    @include font-parametars (16px, 18px, 400);
+                }
+            }
+        }
+    }
+
+    .welcome-box {
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto 50px;
+
+        h2 {
+            @include font-parametars (50px, 52px, 700);
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+
+        p {
+            @include font-parametars (16px, 24px, 500);
+        }
+
+        @include bp(mobile) {
+            h2 {
+                @include font-parametars (30px, 32px, 700);
+            }
+        }
+    }
+}

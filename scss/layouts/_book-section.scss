@@ -1,0 +1,26 @@
+.book-section {
+    padding: 100px 0;
+    color: $white;
+    background: $orange;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .book-text {
+            span {
+                text-transform: none;
+                @include font-parametars (20px, 22px, 400);
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+        }
+
+        .orange-btn {
+            border: 1px solid $white;
+
+        }
+    }
+}

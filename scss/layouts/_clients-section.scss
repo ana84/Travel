@@ -1,0 +1,50 @@
+.clients-section {
+    padding: 100px 15px 150px;
+
+    .clients-box {
+        text-align: center;
+
+        span {
+            margin-bottom: 50px;
+            display: block;
+            @include font-parametars (18px, 20px, 400);
+        }
+    }
+}
+
+.clients-slide {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .clients-item {
+        display: flex;
+
+        img {
+            border-radius: 10px;
+
+        }
+
+        .clients-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 20px;
+            text-align: justify;
+        }
+    }
+
+    .name {
+        width: 100%;
+
+        span {
+            &:first-of-type {
+                color: $orange;
+                display: block;
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: -80px;
+    }
+}

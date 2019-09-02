@@ -1,0 +1,105 @@
+.banner-section {
+    background: url(../assets/images/banner.jpg)top center;
+    background-repeat: no-repeat;
+    min-height: 615px;
+    width: 100%;
+    position: relative;
+
+    .banner-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        text-align: center;
+        text-transform: capitalize;
+
+        h1 {
+            @include font-parametars (50px, 52px, 700);
+            margin-bottom: 15px;
+        }
+
+        p {
+            @include font-parametars (18px, 20px, 400);
+            margin-bottom: 15px;
+        }
+    }
+
+    .play-box {
+        position: absolute;
+        color: $white;
+        top: 85%;
+        left: 5%;
+
+        .play {
+            border: 2px solid $white;
+            background: transparent;
+            border-radius: 50%;
+            padding: 10px 12px 10px 17px;
+            color: $white;
+            display: inline-block;
+            transition: .3s ease-in-out;
+
+            .fa-play {
+                font-size: 24px;
+            }
+
+            &:hover {
+                color: $orange;
+                border: 2px solid $orange;
+            }
+        }
+
+        span {
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+        }
+
+        span:last-of-type {
+            text-transform: uppercase;
+            position: relative;
+        }
+    }
+
+    .video {
+        display: none;
+        overflow: hidden;
+        /*position: relative;
+        padding-top: 56.25%;*/
+        padding-top: 32.25%;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            z-index: 1;
+        }
+
+        .close {
+            color: $white;
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            background-color: $red;
+            border: 0;
+            outline: 0;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                background-color: $gray;
+            }
+        }
+    }
+
+    @include bp(mobile) {
+        .banner-box {
+            top: 50%;
+        }
+    }
+}
